@@ -57,6 +57,7 @@ namespace NLogLab
 
             // NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(target, LogLevel.Debug);
             // NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(mailTarget, LogLevel.Error);
+            LogManager.Configuration = new LoggingConfiguration();
             var fileRule = new LoggingRule("SysCore", LogLevel.Trace, target);
             LogManager.Configuration.AddTarget("file", target);
             LogManager.Configuration.LoggingRules.Add(fileRule);
